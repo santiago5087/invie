@@ -1,0 +1,247 @@
+/* Lo de cascada viene de que dependiendo donde se encuentren los selectores, se le dan prioridad a los que se encuentran más abajo, porque estos se cargan de últimos, por ende estos estilos prevalecerán o pisaran sus antecesores (si es que actúan sobre los mismos elementos */
+
+body { /* Los estilos de etiquetas se posicionan de primeros */
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+}
+
+input, textarea {
+    outline: 0px; /* Para que no se resalte el borde del input cuando hacemos foucrs */
+}
+
+input:focus, textarea:focus { /* Pseudoclases */
+    background-color: #ff7250;
+}
+
+table {
+    width: 100%; /* Para que tenga un ancho igual al de su padre (el contenedor) */
+    margin: 50px 0px;
+}
+
+th {
+    background-color: #1F313C;
+    color: white;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+td {
+    padding: 20px;
+}
+
+.background {
+    background-image: url("../Images/background.png");
+    background-size: cover; /* Me cubre todo el espacio con la imagen de fondo */
+}
+
+table, th, td {
+    border: 1px solid #1F313C;
+    border-collapse: collapse; /* Hace que se unan las líneas que dividen la tabla */
+}
+
+.button {
+    border-radius: 12px;
+    border: none;
+    color: white; 
+    padding: 8px 12px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    /* background: linear-gradient(to left, #fe3443, #ff7250); */
+    background: linear-gradient(to bottom, rgba(254,204,177,1) 0%,rgba(241,116,50,1) 50%,rgba(234,85,7,1) 51%,rgba(251,149,94,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ tomado de: colorzilla */
+    cursor: pointer; /* Hace que la manito aparezca cuando nos paramos en el botón */
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    position: relative;
+}
+
+.titulo {
+    font-size: 70px;
+    font-family: 'Satisfy', cursive;
+    margin-top: 70px;
+    margin-bottom: 2px;
+}
+
+.titulo span { /* span sirve para coger partes de textos y darles estilo */
+    text-decoration: underline;
+}
+
+.titulo-a {
+    font-size: 24px;
+    margin-top: 2px; 
+    margin-bottom: 10px;
+}
+
+
+.titulo-b {
+    font-size: 50px;
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.guitarras {
+    color: #1F313C;
+}
+
+.guitarras h2 {
+    font-size: 35px;
+    font-family: 'Satisfy', cursive;
+    margin-top: 100px;
+}
+
+.portada {
+    color: white;
+    padding: 20px;
+    height: 450px;
+}
+
+.menu {
+    font-size: 25px;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+}
+
+.menu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.menu li:before {
+    content: "•";
+    font-size: 30px;
+    line-height: 50px;
+    color: white;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.logotipo {
+    display: inline-block;
+    margin-right: 200px;
+    margin-left: 0px;
+}
+
+.contenedor {
+    width: 800px;
+    margin: auto; /* Centra el contenido */
+    position: relative; /* Esto se hace porque cuando tenemos un elemento con posición absoluta, este se alinea con respecto a la primera etiqueta padre que tenga una posición relativa, todo esto para que nuestra barra de navegación no se desacomode (se iba para la etiqueta body) */
+}
+
+/* Con absolute la imagen se ubica donde encuntre la clase (etiqueta) padre que tenga la propiedad de posición relativa, si a alguna propiedad de dirección (top, right, left, bottom) le asigno le valor de 0px, la imagen se me alinea respecto a esta dirección.
+Con fixed la imagen aparece fijada en la página y se mueve también cuando movemos la página */
+
+.imgDer {
+    float: right;
+    position: relative;
+    right: 65px;
+    bottom: 150px;
+}
+
+.imgIzq {
+    float: left;
+    position: relative;
+    bottom: 15px;
+}
+
+.guitarra {
+    margin: 30px 10px 30px 0px;
+    padding: 10px;
+    /*overflow: hidden; */  /* con overflow: hidden hace que las partes que se desbordan sean ocultadas */
+    border: 1px solid #1F313C;
+    position: relative;
+    border-radius: 25px;
+    height: 190px;
+}
+
+.guitarra ol {
+    padding: 0px;
+}
+
+.contenedor-guitarra1 {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.contenedor-guitarra2 {
+    display: inline-block;
+    margin-left: 70px;
+    position: relative;
+    bottom: 110px;
+}
+
+.footer {
+    background-color: #1F313C;
+    margin-top: 100px;
+
+}
+
+.contacto {
+    display: flex;
+    flex-wrap: wrap; /* Hace que los elementos que no caben en el contenedor, los mande para abajo, por defecto viene con el valor de nowrap, además flex solo afecta a los hijos directos */
+    padding: 30px;
+    width: 350px;
+    align-items: center;
+    height: 185px;
+    margin-top: 40px;
+}
+
+.contacto img {
+    display: block;
+    padding-bottom: 15px;
+    width: 250px;
+    
+}
+
+.contacto strong {
+    display: block;
+}
+
+.contacto a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    margin: 10px 10px 10px 0px;
+}
+
+.formulario {
+    display: flex;
+    justify-content: space-between;
+    width: 530px;
+    color: white;
+    padding: 50px 10px;
+}
+
+.footer .contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col1, .col2 {
+    display: flex;
+    flex-direction: column; /* Hace que los elementos los ponga por columnas */
+}
+
+.col1 {
+    margin-right: 15px;
+}
+
+.col2 {
+    align-items: flex-start;
+}
+
+.formulario label, .sexo, .intereses { /* Hijos directos que son labes (primer selector) */
+    margin-bottom: 10px;
+}
+
+.sexo {
+    margin-top: 10px;
+}

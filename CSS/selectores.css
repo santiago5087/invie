@@ -1,0 +1,50 @@
+/*
+tipo de selector {
+    propiedad: valor;
+    propiedad2: valor;
+}
+*/
+
+/* Selector universal */
+* {
+    border: 1px solid red;
+    margin: 10px;
+}
+
+/* Selector de etiquita */
+header {
+    background: lightblue;
+}
+
+section {
+    background: lightcoral;
+}
+
+/* Selector descendente */
+article h3 { /* Solo afecta a los h3 que están dentro de un article */
+    color : green;
+}
+
+/* Selectores de clase */
+.title-a {
+    background: gold;
+}
+
+.title-b {
+    background: lightseagreen;
+}
+
+/* Selector de id */
+#header {
+    border: 5px solid black;
+}
+
+#portada {
+    border: 5px solid orange;
+}
+
+#guitarras {
+    border: 5px solid brown;
+}
+
+

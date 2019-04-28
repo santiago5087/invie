@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html> 
+<!-- HACERLE EL BACKEND PERO MODIFICANDOLO A UNA TIENDA DE GUITARRAS DE MÁS ESTIOLO MÍO-->
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Satisfy" rel="stylesheet">
+
+    <title>Precios de tus mejores guitarras</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='CSS/invie.css'>
+</head>
+<body>
+    <header class="header background">
+        <div class="contenedor">
+            <figure class="logotipo"> <!-- logotipo-->
+                <img src="Images/invie.png" width="186" height="60" alt="Invie logotipo" />
+            </figure>
+            <nav class="menu"> <!-- menu -->
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#guitarras">Guitars</a></li>
+                    <li><a href="precios.html">Prices</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="tabla">
+        <div class="contenedor">
+            <table>
+            <thead> <!-- Cabezera de la tabla -->
+                <tr>
+                    <th>Modelo</th>
+                    <th>Precio</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Invie Classic</td>
+                        <td>$100000</td>
+                        <td>Guitarra muy profesional</td>
+                    </tr>
+                    <tr>
+                        <td>Invie Classic</td>
+                        <td>$100000</td>
+                        <td>Guitarra muy profesional</td>
+                    </tr>
+                    <tr>
+                        <td>Invie Classic</td>
+                        <td>$100000</td>
+                        <td>Guitarra muy profesional</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+    
+    
+    </section>
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="contacto">
+                <img src="Images/invie-white.png" alt="logotipo-blanco" />
+                <a href="tel:+573023298764" > <strong>Teléfono</strong> <span>302 329 8764</span></a>
+                <a href="mailto:esmarina@unal.edu.co"> <strong>E-mail</strong> <span>esmarina@unal.edu.co</span></a>
+            </div>
+
+            <form class="formulario">
+                <div class="col1">
+                    <label for="nombre">Nombre </label>
+                    <input type="text" id="nombre" placeholder="Name" name="nombre" required />
+                    <label for="correo">E-mail </label>
+                    <input type="email" id="correo" placeholder="xxx@xxx.com" name="email" required  />
+
+                    <div class="sexo">
+                        <label for="mujer">
+                            <input type="radio" checked id="mujer" name="sexo" value="mujer"> Mujer
+                        </label>
+                        <label for="hombre">
+                            <input type="radio" id="hombre" name="sexo" value="hombre"> Hombre
+                        </label>
+                    </div>
+
+                    <!-- El atributo value en los checkbox y en el radio button, le ayuda al backend a distinguir o diferenciar a todos estos elementos, es decir, cual fué seleccionado particularmente -->
+                    <div class="intereses">
+                        <label for="cotizacion">
+                            <input type="checkbox" id="cotizacion" checked name="intereses" value="cotizacion" /> Cotización
+                        </label>
+                        <label for="reclamos">
+                                <input type="checkbox" id="reclamos" name="intereses" value="reclamos" /> Reclamos
+                        </label>
+                        <label for="comentarios">
+                                <input type="checkbox" id="comentarios" name="intereses" value="comentarios" /> Comentarios
+                        </label>
+                        <label for="otros">
+                                <input type="checkbox" id="otros" name="intereses" value="otros" /> Otros
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col2">
+                    <label for="asunto">Asunto </label>
+                    <textarea name="asunto" id="asunto" cols="30" rows="10"></textarea>
+                    <input type="submit" value="Enviar" class="button" />
+
+
+                </div>
+            </form>
+        </div>
+    </footer>
+</body>
+</html>
